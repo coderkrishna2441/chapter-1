@@ -117,4 +117,38 @@ class test{
 }
 
 
-// Q 27
+// Q 29
+interface A1{
+    double pie = 3.14;
+}
+interface A2{
+    int age = 19;
+}
+interface A extends A1,A2{
+    String name = "krishna";
+}
+interface P1{
+    int salary = 12000;
+}
+interface P2{
+    String office = "TCS";
+}
+interface A12 extends P1,P2,A{
+    int emp_id = 1;
+}
+class B implements A12{
+    void display(){
+        System.out.println(pie + " " + name + " " + age);
+    }
+    void display1(){
+        System.out.println(office + " " + emp_id + " " + salary);
+    }
+}
+
+class test{
+    public static void main(String args[]){
+        B obj = new B();
+        obj.display();
+        obj.display1();
+    }
+}
