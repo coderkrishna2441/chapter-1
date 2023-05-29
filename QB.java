@@ -59,6 +59,7 @@ class run{
     }
 }
 
+
 // Q 26
 import java.util.*;
 abstract class Person{
@@ -114,3 +115,6 @@ class test{
         emp.display1();
     }
 }
+
+
+// Q 27
