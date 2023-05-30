@@ -152,3 +152,52 @@ class test{
         obj.display1();
     }
 }
+
+
+// Q 30
+class Book{
+    private String author_name;
+    public void getName(String author_name){
+        this.author_name = author_name;
+    }
+    public void display(){
+        System.out.print("the book author is: " + author_name);
+    }
+    public void getTitle(String title){
+    }
+}
+class book_publication extends Book{
+    private String title;
+    public void getTitle(String title){
+        this.title = title;
+    }
+    public void display(){
+        super.display();
+        System.out.println(" the title is " + this.title);
+    }
+}
+class paper_publication extends Book{
+    private String title;
+    public void getTitle(String title){
+        this.title = title;
+    }
+    public void display(){
+        super.display();
+        System.out.println(" the title is " + this.title);
+    }
+}
+class Test{
+    public static void main(String args[]){
+        Book pointer1 = null;
+        book_publication b1 = new book_publication();
+        paper_publication p1 = new paper_publication();
+        pointer1 = b1;
+        pointer1.getName(args[0]);
+        pointer1.getTitle(args[1]);
+        pointer1.display();
+        pointer1 = p1;
+        pointer1.getName(args[2]);
+        pointer1.getTitle(args[3]);
+        pointer1.display();
+    }
+}
